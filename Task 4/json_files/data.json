@@ -1,0 +1,100 @@
+[
+    {
+        "research-and-development-survey-2022.csv": {
+            "csv_file_size_in_mb": 5.958,
+            "df_of_csv_rows_n": 36564,
+            "df_of_csv_columns_n": 9,
+            "df_size_in_mb": 20.832,
+            "df_of_column_size_in_mb": [
+                {
+                    "Variable": 0.0
+                },
+                {
+                    "Breakdown": 4.583
+                },
+                {
+                    "Breakdown_category": 2.426
+                },
+                {
+                    "Year": 2.931
+                },
+                {
+                    "RD_Value": 0.279
+                },
+                {
+                    "Status": 2.075
+                },
+                {
+                    "Unit": 1.181
+                },
+                {
+                    "Footnotes": 2.693
+                },
+                {
+                    "Relative_Sampling_Error": 2.573
+                }
+            ]
+        }
+    },
+    {
+        "taxi_data.csv": {
+            "csv_file_size_in_mb": 0.83,
+            "df_of_csv_rows_n": 10018,
+            "df_of_csv_columns_n": 17,
+            "df_size_in_mb": 3.076,
+            "df_of_column_size_in_mb": [
+                {
+                    "vendor_id": 0.0
+                },
+                {
+                    "pickup_datetime": 0.076
+                },
+                {
+                    "dropoff_datetime": 0.726
+                },
+                {
+                    "passenger_count": 0.726
+                },
+                {
+                    "trip_distance": 0.076
+                },
+                {
+                    "rate_code": 0.076
+                },
+                {
+                    "store_and_fwd_flag": 0.076
+                },
+                {
+                    "payment_type": 0.554
+                },
+                {
+                    "fare_amount": 0.076
+                },
+                {
+                    "extra": 0.076
+                },
+                {
+                    "mta_tax": 0.076
+                },
+                {
+                    "tip_amount": 0.076
+                },
+                {
+                    "tolls_amount": 0.076
+                },
+                {
+                    "imp_surcharge": 0.076
+                },
+                {
+                    "total_amount": 0.076
+                },
+                {
+                    "pickup_location_id": 0.076
+                },
+                {
+                    "dropoff_location_id": 0.076
+                }
+            ]
+        }
+    }
+]
