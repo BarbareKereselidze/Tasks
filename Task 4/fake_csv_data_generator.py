@@ -12,7 +12,7 @@ class GenerateFakeCsv:
         self.fake_data = []
         self.row_amount = randint(100, 1000)
 
-    def generate_fake_user(self):
+    def generate_fake_user(self) -> list:
         header = ["name", "birthdate", "email", "address", "phone_number"]
         self.fake_data.append(header)
 
@@ -30,7 +30,7 @@ class GenerateFakeCsv:
 
         return self.fake_data
 
-    def generate_fake_job(self):
+    def generate_fake_job(self) -> list:
         header = ["name", "job", "company", "salary", "credit_card_number", "credit_card_expire"]
         self.fake_data.append(header)
 
@@ -47,7 +47,7 @@ class GenerateFakeCsv:
 
         return self.fake_data
 
-    def generate_csv(self, csv_directory_path):
+    def generate_csv(self, csv_directory_path) -> None:
         timestamp = datetime.now().timestamp()
         filename = f"{csv_directory_path}/fake_data_{timestamp}.csv"
 
@@ -65,5 +65,4 @@ class GenerateFakeCsv:
 
             except FileNotFoundError:
                 os.makedirs(csv_directory_path, exist_ok=True)
-
 
