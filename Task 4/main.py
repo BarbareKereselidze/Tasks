@@ -1,9 +1,11 @@
 import os
 import pandas as pd
 import json
+from datetime import datetime
 
+from fake_csv_data_generator import GenerateFakeCsv
 
-path = "cvs_files"
+path = "csv_files"
 
 
 class GetCsvFiles:
@@ -62,7 +64,7 @@ class ProcessCSV:
 
 class KeepDataInDict:
     def __init__(self):
-        self.get_files = GetCsvFiles("cvs_files").get_csv_paths()
+        self.get_files = GetCsvFiles("csv_files").get_csv_paths()
         self.all_csv_data = []
 
     def process_and_store_data(self):
@@ -87,10 +89,21 @@ class KeepDataInDict:
         return self.all_csv_data
 
 
-data_keeper = KeepDataInDict()
-aaa = data_keeper.process_and_store_data()
+def main():
 
-with open('json_files/data.json', 'w') as json_file:
-    json.dump(aaa, json_file, indent=4)
+    generator = GenerateFakeCsv()
+    generator.generate_csv("csv_files")
+
+    data_keeper = KeepDataInDict()
+    aaa = data_keeper.process_and_store_data()
+
+    current_timestamp = datetime.now().timestamp()
+
+    with open(f'json_files/summary_{current_timestamp}.json', 'w') as json_file:
+        json.dump(aaa, json_file, indent=4)
+
+
+if __name__ == "__main__":
+    main()
 
 
